@@ -12,6 +12,7 @@ l.insert(len(l), 1)
 from sys import argv
 from time import perf_counter
 
+
 def main(iteractions=1000000):
 
     """
@@ -25,7 +26,7 @@ def main(iteractions=1000000):
 
     finish = perf_counter()
     print("Append of {0} items took {1:.4f}s".format(iteractions, finish - start))
-    
+
     """
     Testing the extend method
     """
