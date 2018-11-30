@@ -14,6 +14,9 @@ from time import perf_counter
 
 def main(iteractions=1000000):
 
+    """
+    Testing the append method
+    """
     l = []
     start = perf_counter()
 
@@ -22,7 +25,22 @@ def main(iteractions=1000000):
 
     finish = perf_counter()
     print("Append of {0} items took {1:.4f}s".format(iteractions, finish - start))
+    
+    """
+    Testing the extend method
+    """
+    l = []
+    start = perf_counter()
 
+    for i in range(iteractions):
+        l.extend([i])
+
+    finish = perf_counter()
+    print("Extend of {0} items took {1:.4f}s".format(iteractions, finish - start))
+
+    """
+    Testing the insert method
+    """
     l = []
     start = perf_counter()
 
@@ -31,6 +49,7 @@ def main(iteractions=1000000):
 
     finish = perf_counter()
     print("Insert of {0} items took {1:.4f}s".format(iteractions, finish - start))
+
 
 if __name__ == "__main__":
     if len(argv) > 1 and argv[1].isnumeric():
